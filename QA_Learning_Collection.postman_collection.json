@@ -194,7 +194,8 @@
   "variable": [
     {
       "key": "baseUrl",
-      "value": "https://jsonplaceholder.typicode.com"
+      "value": "https://jsonplaceholder.typicode.com",
+      "disabled": true
     }
   ]
 }
