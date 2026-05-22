@@ -13,10 +13,10 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Install Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '18'
 
@@ -27,10 +27,10 @@ jobs:
 
     - name: Run Postman Collection
       run: |
-        newman run QA_Learning_Collection.postman_collection.json -e  QA_Environment.postman_environment.json -r htmlextra --reporter-htmlextra-export reports/report.html
+        newman run QA_Learning_Collection.postman_collection.json -e QA_Environment.postman_environment.json -r htmlextra --reporter-htmlextra-export reports/report.html
 
     - name: Upload Test Report
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: postman-html-report
         path: reports/report.html
